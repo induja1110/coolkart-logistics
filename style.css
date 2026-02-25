@@ -3,7 +3,6 @@ body {
     margin: 0; 
     font-family: Arial, sans-serif; 
 }
-
 /* HEADER */
 header {
     position: fixed;
@@ -12,21 +11,25 @@ header {
     width: 100%;
     background: #0A1F44;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 40px;   /* Reduced side padding */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;  /* Important change */
     z-index: 1000;
 }
 
+/* Logo */
 .logo {
-    width: 150px;
+    width: 140px;
+    height: auto;
+    margin-right: 30px;   /* Space between logo and text */
 }
 
-/* Push content below fixed header */
-body {
-    margin-top: 90px;
+/* Header text */
+.header-text {
+    text-align: left;
 }
+
 
 /* NAVIGATION */
 nav { 
@@ -139,3 +142,4 @@ footer {
     font-size: 20px;
 }
 </style>
+
