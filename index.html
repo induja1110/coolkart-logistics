@@ -73,11 +73,16 @@
 <!-- CONTACT -->
 <div class="section" id="contact">
     <h2>Contact Us</h2>
-    <form>
-        <input type="text" placeholder="Your Name"><br>
-        <input type="email" placeholder="Your Email"><br>
-        <textarea placeholder="Your Message"></textarea><br>
-        <button type="submit">Send Message</button>
+       <form action="https://formspree.io/f/xpqjkbkb" method="POST">
+
+    <input type="text" name="name" placeholder="Your Name" required><br>
+
+    <input type="email" name="email" placeholder="Your Email" required><br>
+
+    <textarea name="message" placeholder="Your Message" required></textarea><br>
+
+    <button type="submit">Send Message</button>
+
     </form>
 </div>
 
@@ -98,4 +103,5 @@ function showForm() {
 
 </body>
 </html>
+
 
