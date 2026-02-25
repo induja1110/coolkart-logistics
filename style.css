@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COOLKART LOGISTICS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 body { 
     margin: 0; 
@@ -12,20 +19,36 @@ header {
     width: 100%;
     background: #0A1F44;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
 }
 
+/* Logo */
 .logo {
-    width: 150px;
+    width: 140px;
+    height: auto;
+}
+
+/* Header text alignment */
+.header-text {
+    text-align: right;
+}
+
+.header-text h1 {
+    margin: 0;
+}
+
+.header-text p {
+    margin: 5px 0 0;
+    font-size: 14px;
 }
 
 /* Push content below fixed header */
 body {
-    margin-top: 90px;
+    margin-top: 100px;
 }
 
 /* NAVIGATION */
@@ -66,11 +89,6 @@ nav a {
 .hero-text h1 {
     font-size: 50px;
     margin: 0;
-}
-
-.hero-text p {
-    font-size: 20px;
-    margin: 15px 0;
 }
 
 .hero-text button {
@@ -139,3 +157,92 @@ footer {
     font-size: 20px;
 }
 </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <img src="logo.png" alt="Coolkart Logo" class="logo">
+    <div class="header-text">
+        <h1>COOLKART LOGISTICS</h1>
+        <p>• Reliable • Secure Transport Solutions</p>
+    </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO SECTION -->
+<div class="hero">
+    <img src="truck.jpg" alt="Coolkart Truck" class="hero-img">
+    <div class="hero-text">
+        <h1>Reliable • Secure Truck Transport Across India</h1>
+        <br>
+        <button onclick="showForm()">Request a Quote</button>
+    </div>
+</div>
+
+<!-- QUOTE FORM -->
+<div class="section" id="quoteForm" style="display:none;">
+    <h2>Request a Quote</h2>
+    <form action="https://formspree.io/f/xykdlbdz" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required><br>
+        <input type="tel" name="phone" placeholder="Phone Number" required><br>
+        <input type="text" name="pickup" placeholder="Pickup Location" required><br>
+        <input type="text" name="delivery" placeholder="Delivery Location" required><br>
+        <input type="email" name="email" placeholder="Your Email" required><br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<!-- SERVICES -->
+<div class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="box">
+            <h3>Road Transport</h3>
+            <p>Fast and secure delivery across India.</p>
+        </div>
+    </div>
+</div>
+
+<!-- TRACKING -->
+<div class="section">
+    <h2>Track Your Shipment</h2>
+    <input type="text" placeholder="Enter Tracking Number"><br>
+    <button>Track</button>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name"><br>
+        <input type="email" placeholder="Your Email"><br>
+        <textarea placeholder="Your Message"></textarea><br>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 COOLKART LOGISTICS | All Rights Reserved</p>
+</footer>
+
+<!-- WhatsApp Button -->
+<a class="whatsapp" href="https://wa.me/919150912750" target="_blank">💬</a>
+
+<script>
+function showForm() {
+    document.getElementById("quoteForm").style.display = "block";
+    document.getElementById("quoteForm").scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
