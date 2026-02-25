@@ -5,33 +5,39 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-<header>
-    <h1>COOLKART LOGISTICS</h1>
-    <p>• Reliable • Secure Transport Solutions</p>
+<!-- HEADER -->
+<header class="main-header">
+    <img src="images/logo.png" alt="CoolKart Logo" class="logo">
+    <div class="header-text">
+        <h1>COOLKART LOGISTICS</h1>
+        <p>• Reliable • Secure Transport Solutions</p>
+    </div>
 </header>
 
+<!-- NAVIGATION -->
 <nav>
     <a href="#">Home</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
 </nav>
+
+<!-- HERO SECTION -->
 <div class="hero">
     <img src="truck.jpg" alt="Coolkart Truck" class="hero-img">
 
     <div class="hero-text">
-	<br><br>
-        <h1>COOLKART LOGISTICS</h1>
-        <p>Reliable • Secure Truck Transport Across India</p>
+        <h1>Reliable • Secure Truck Transport Across India</h1>
         <button onclick="showForm()">Request a Quote</button>
     </div>
 </div>
-<div class="section" id="quoteForm" style="display:none;">
 
+<!-- QUOTE FORM -->
+<div class="section" id="quoteForm" style="display:none;">
     
-    	<form action="https://formspree.io/f/xykdlbdz" method="POST">
-    
+    <form action="https://formspree.io/f/xykdlbdz" method="POST">
 
         <input type="text" name="name" placeholder="Your Name" required><br>
         <input type="tel" name="phone" placeholder="Phone Number" required><br>
@@ -44,8 +50,8 @@
     </form>
 
 </div>
-</div>
 
+<!-- SERVICES -->
 <div class="section" id="services">
     <h2>Our Services</h2>
     <div class="services">
@@ -53,9 +59,10 @@
             <h3>Road Transport</h3>
             <p>Fast and secure delivery across India.</p>
         </div>
-     </div>
+    </div>
 </div>
 
+<!-- TRACKING -->
 <div class="section">
     <h2>Track Your Shipment</h2>
     <input type="text" placeholder="Enter Tracking Number">
@@ -63,6 +70,7 @@
     <button>Track</button>
 </div>
 
+<!-- CONTACT -->
 <div class="section" id="contact">
     <h2>Contact Us</h2>
     <form>
@@ -73,32 +81,20 @@
     </form>
 </div>
 
+<!-- FOOTER -->
 <footer>
     <p>© 2026 COOLKART LOGISTICS | All Rights Reserved</p>
 </footer>
 
 <!-- WhatsApp Button -->
 <a class="whatsapp" href="https://wa.me/919150912750" target="_blank">💬</a>
+
 <script>
 function showForm() {
     document.getElementById("quoteForm").style.display = "block";
     window.location.hash = "quoteForm";
 }
-
-function submitForm(event) {
-    event.preventDefault();
-    document.getElementById("successMsg").style.display = "block";
-}
 </script>
-<form name="quote" method="POST" data-netlify="true" hidden>
-  <input type="hidden" name="form-name" value="quote">
-  <input type="text" name="name">
-  <input type="tel" name="phone">
-  <input type="text" name="pickup">
-  <input type="text" name="delivery">
-  <input type="email" name="email">
-</form>
+
 </body>
-
 </html>
-
