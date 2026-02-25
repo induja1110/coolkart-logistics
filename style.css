@@ -9,7 +9,6 @@
 body { 
     margin: 0; 
     font-family: Arial, sans-serif; 
-    margin-top: 100px;   /* Push content below fixed header */
 }
 
 /* HEADER */
@@ -20,10 +19,10 @@ header {
     width: 100%;
     background: #0A1F44;
     color: white;
-    padding: 10px 50px;   /* Adjusted padding */
+    padding: 10px 80px;
     display: flex;
     align-items: center;
-    gap: 40px;            /* Space between logo and text */
+    justify-content: space-between;
     z-index: 1000;
 }
 
@@ -33,9 +32,10 @@ header {
     height: auto;
 }
 
-/* Header text */
+/* Header text alignment */
 .header-text {
-    text-align: left;     /* Text moved left */
+    text-align: right;
+    max-width: 500px;
 }
 
 .header-text h1 {
@@ -45,6 +45,11 @@ header {
 .header-text p {
     margin: 5px 0 0;
     font-size: 14px;
+}
+
+/* Push content below fixed header */
+body {
+    margin-top: 100px;
 }
 
 /* NAVIGATION */
@@ -183,7 +188,64 @@ footer {
     </div>
 </div>
 
-<!-- Remaining sections unchanged -->
+<!-- QUOTE FORM -->
+<div class="section" id="quoteForm" style="display:none;">
+    <h2>Request a Quote</h2>
+    <form action="https://formspree.io/f/xykdlbdz" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required><br>
+        <input type="tel" name="phone" placeholder="Phone Number" required><br>
+        <input type="text" name="pickup" placeholder="Pickup Location" required><br>
+        <input type="text" name="delivery" placeholder="Delivery Location" required><br>
+        <input type="email" name="email" placeholder="Your Email" required><br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<!-- SERVICES -->
+<div class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="box">
+            <h3>Road Transport</h3>
+            <p>Fast and secure delivery across India.</p>
+        </div>
+    </div>
+</div>
+
+<!-- TRACKING -->
+<div class="section">
+    <h2>Track Your Shipment</h2>
+    <input type="text" placeholder="Enter Tracking Number"><br>
+    <button>Track</button>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name"><br>
+        <input type="email" placeholder="Your Email"><br>
+        <textarea placeholder="Your Message"></textarea><br>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 COOLKART LOGISTICS | All Rights Reserved</p>
+</footer>
+
+<!-- WhatsApp Button -->
+<a class="whatsapp" href="https://wa.me/919150912750" target="_blank">💬</a>
+
+<script>
+function showForm() {
+    document.getElementById("quoteForm").style.display = "block";
+    document.getElementById("quoteForm").scrollIntoView({ behavior: 'smooth' });
+}
+</script>
 
 </body>
 </html>
+
+delete html code and heder text slightly left code
